@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body, html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-image: url('fondo.webp');
+}
+
+/* Estilos para / */
+
+.asideIzq{
+  background-color: rgba(255, 255, 255, 0.6); 
+  width: 20%;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-right: 3px solid black;
+  a{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 45px;
+  }
+}
+.contenedorMensajes {
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contacto {
+  width: 100%;
+  height: 75px;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #333;
+  color: #f4f4f4; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.contacto:hover {
+  background-color: #444;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.02); 
+}
+.contacto:active {
+  background-color: #222; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+  transform: scale(1);
+}
+a{
+  width: 100%;
+  align-self: center;
+  margin: 8px;
+  margin-bottom: 20px;
+}
+.botonCrarContacto {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #555;
+  color: #f4f4f4; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; 
+  border: 2px solid #007bff; 
+}
+.botonCrarContacto:hover {
+  background-color: #666; /* Gris más oscuro al pasar el cursor */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: scale(1.02); /* Efecto de escala */
+}
+.botonCrarContacto:active {
+  background-color: #333; /* Gris oscuro al hacer clic */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+  transform: scale(1); /* Volver a la escala original */
+}
+.texto {
+  overflow: hidden;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+.areaMensajes {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.mensaje {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+.mensajeIzquierda {
+  max-width: 50%;
+  background-color: #ffffff;
+  align-self: flex-start;
+  span{
+    float: right;
+  }
+  p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.mensajeDerecha {
+  max-width: 50%;
+  background-color: #d9fdd3;
+  align-self: flex-end;
+  span{
+    float: right;
+  }
+  p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.nombreChat{
+  display: flex;
+  align-items: center;
+  max-height: 70px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: sticky; 
+  bottom: 0;
+  z-index: 10; 
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  h1{
+    margin-left: 10px;
+  }
+}
+.campoEnviarMensaje {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: sticky; 
+  bottom: 0;
+  z-index: 10;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.inputMensaje {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.botonEnviar {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+/* Estilos para /add */
+
+.headerFormulario{
+  width: 100%;
+  height: 50px;
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  a{
+    width: auto;
+  }
+}
+.contendeorFormulario{
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formContacto{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+form {
+  max-width: 300px;
+  width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  div {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #666;
+  }
+  button:active {
+    background-color: #333;
+  }
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
